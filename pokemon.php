@@ -16,6 +16,7 @@ class Pokemon
     $this->type = $type; 
     $this->niveau = $niveau; 
     $this->atk = $atk;
+
 }
     
     public function setNomPokemon($nom)
@@ -68,13 +69,9 @@ public function getAtk()
     return $this->atk; 
 }
 
-public function Attaquer($defenseur)
+public function Attaquer($deck)
 {
-    $defenseur->pv = $defenseur->pv-$this->atk;
-    $this->Attaquer = $defenseur->pv-$this->atk;
-    if($defenseur->pv <= 0){
-        return "mort";
-}
-}
+    $deck->pv = $deck->pv-$this->atk;
 }
 
+}
